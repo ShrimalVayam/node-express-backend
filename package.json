@@ -1,0 +1,30 @@
+{
+  "name": "toothsi-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JainVayam/toothsi-task.git"
+  },
+  "author": "Vayam Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JainVayam/toothsi-task/issues"
+  },
+  "homepage": "https://github.com/JainVayam/toothsi-task#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "convict": "^6.0.0"
+  }
+}
