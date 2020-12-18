@@ -35,8 +35,8 @@ const config = convict({
           max: 40,
           min: 0,
           idle: 10000
-        },
-      },
+        }
+      }
     },
     env: 'db'
   }
