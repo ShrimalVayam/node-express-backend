@@ -1,3 +1,3 @@
-// import config from './config'
+import * as server from './app/server'
 
-console.log('--------------')
+server.start()
