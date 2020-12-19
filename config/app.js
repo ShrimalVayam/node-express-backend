@@ -10,8 +10,8 @@ const config = convict({
   },
   env: {
     doc: 'The application environment.',
-    format: ['production', 'dev'],
-    default: 'dev',
+    format: ['production', 'development'],
+    default: 'development',
     env: 'NODE_ENV'
   },
   port: {
@@ -43,6 +43,7 @@ const config = convict({
 })
 
 const env = config.get('env')
+
 const envFilePath = 'env.' + env + '.json'
 config.loadFile(envFilePath)
 
