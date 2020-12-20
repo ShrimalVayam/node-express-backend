@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import compression from 'compression'
+import expressBoom from 'express-boom'
 
 import initRoutes from '../routes'
 
@@ -11,6 +12,9 @@ const app = express()
 function initMiddleware () {
   // Enable cors
   app.use(cors())
+
+  // Enable express-boom
+  app.use(expressBoom())
 
   // Request body parsing middleware
   app.use(bodyParser.urlencoded({
