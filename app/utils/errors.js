@@ -1,7 +1,8 @@
 export const Errors = {
   unauthorized: 'unauthorized',
   forbidden: 'forbidden',
-  internal: 'internal'
+  internal: 'internal',
+  badRequest: 'badRequest'
 }
 
 export const Messages = {

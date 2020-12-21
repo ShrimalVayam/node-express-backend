@@ -7,8 +7,8 @@ const success = (res, data) => {
 
 const failed = (res, errorObj) => {
   if (errorObj) {
-    const { type, errorMessage } = errorObj
-    res.boom[type](errorMessage)
+    const { type, message } = errorObj
+    res.boom[type](message)
   } else {
     res.boom.internal(MESSAGES.SERVER_ERROR)
   }

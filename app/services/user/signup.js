@@ -11,12 +11,11 @@ const signup = async (userDetails) => {
       return { user, token }
     } catch (e) {
       return {
-        error: true,
-        message: Errors.INTERNAL
+        error: { type: Errors.internal, message: Messages.internal }
       }
     }
   } return {
-    error: { type: Errors.internal, message: Messages.emailAlreadyRegistered }
+    error: { type: Errors.forbidden, message: Messages.emailAlreadyRegistered }
   }
 }
 

@@ -6,6 +6,6 @@ export const signup = async (req, res) => {
   if (!result.error) {
     Responder.success(res, result)
   } else {
-    Responder.fail(res, result)
+    Responder.failed(res, result.error)
   }
 }
