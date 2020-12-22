@@ -14,7 +14,7 @@ const success = (res, data) => {
 }
 
 const failed = (res, errorObj) => {
-  if (errorObj) {
+  if (errorObj && errorObj.type) {
     const { type, message } = errorObj
     res.boom[type](message || Messages[type])
   } else {
