@@ -5,5 +5,5 @@ export const signup = [
   bodyExists('name'),
   bodyExists('email').isEmail().withMessage('Please enter a valid email'),
   bodyExists('password'),
-  bodyExists('role')
+  bodyExists('role').isIn(['teacher', 'student'])
 ]
