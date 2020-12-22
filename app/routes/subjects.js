@@ -6,7 +6,7 @@ import { isAuthenticated, isAuthenticatedTeacher } from '../lib/auth'
 
 const subjectRouter = express.Router()
 
-subjectRouter.get('/', isAuthenticated, (req, res) => { console.log('OK') })
+subjectRouter.get('/', isAuthenticated, subjectsController.listAllSubjects)
 subjectRouter.post('/',
   isAuthenticatedTeacher,
   subjectsSchema.createSubject,
