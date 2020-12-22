@@ -7,10 +7,17 @@ import { isAuthenticated, isAuthenticatedTeacher } from '../lib/auth'
 const subjectRouter = express.Router()
 
 subjectRouter.get('/', isAuthenticated, subjectsController.listAllSubjects)
+
 subjectRouter.post('/',
   isAuthenticatedTeacher,
   subjectsSchema.createSubject,
   validatorMiddleware(subjectsController.createSubjects)
+)
+
+subjectRouter.put('/:subjectId',
+  isAuthenticatedTeacher,
+  subjectsSchema.updateSubject,
+  validatorMiddleware(subjectsController.updateSubject)
 )
 
 export default subjectRouter
