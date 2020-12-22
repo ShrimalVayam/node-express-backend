@@ -1,5 +1,13 @@
 import { Messages } from '../utils/errors'
 
+const checker = (res, result) => {
+  if (result.error) {
+    failed(res, result.error)
+  } else {
+    success(res, result)
+  }
+}
+
 const success = (res, data) => {
   const message = 'Request Processed Successfully'
   if (data) res.status(200).json({ data, message })
@@ -14,4 +22,4 @@ const failed = (res, errorObj) => {
   }
 }
 
-export { success, failed }
+export { success, failed, checker }
