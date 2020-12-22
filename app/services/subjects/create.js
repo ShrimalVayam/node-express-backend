@@ -1,9 +1,9 @@
 import { Subject } from '../../models'
 import { Errors, Messages } from '../../utils/errors'
 
-const createSubject = async ({ name, userId }) => {
+const createSubject = async ({ name, type, userId }) => {
   try {
-    const subject = await Subject.create({ name, teacherId: userId })
+    const subject = await Subject.create({ name, type, teacherId: userId })
     return subject
   } catch (e) {
     let error = { type: Errors.internal }
