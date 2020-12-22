@@ -1,4 +1,4 @@
-import sequelize from '../app/models'
+import sequelize from '../models'
 
 const connect = async () => {
   await sequelize.authenticate()

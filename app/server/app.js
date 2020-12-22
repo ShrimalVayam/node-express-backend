@@ -1,6 +1,6 @@
 import config from '../../config/app'
 import * as express from './express'
-import * as db from '../../lib/sequelize'
+import * as db from '../lib/sequelize'
 
 const start = async () => {
   const port = config.get('port')

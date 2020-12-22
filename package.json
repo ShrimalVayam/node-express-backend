@@ -40,7 +40,13 @@
     "convict": "^6.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-boom": "^3.0.0",
+    "express-validator": "^6.8.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.3.5"
   }
 }

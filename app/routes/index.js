@@ -1,8 +1,10 @@
+import userRouter from './user'
+
 const initRoutes = app => {
   app.post('/_ping', (req, res) => {
     res.send('ok')
   })
-  // app.use('/', router)
+  app.use('/user', userRouter)
 }
 
 export default initRoutes

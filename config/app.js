@@ -36,9 +36,15 @@ const config = convict({
           min: 0,
           idle: 10000
         }
-      }
-    },
-    env: 'db'
+      },
+      env: 'db'
+    }
+  },
+  jwt: {
+    secretToken: {
+      default: 'thisisasamplejwt',
+      env: 'JWT_LOGIN_SECRET'
+    }
   }
 })
 
