@@ -9,7 +9,7 @@ const checkAuth = async (req, res) => {
   const token = authorization && authorization.split(' ')[1]
   try {
     const { payload: { email, id, isTeacher } } = await jwt.verify(token, config.get('jwt.secretToken'))
-    return { email, id, isTeacher }
+    return { email, userId: id, isTeacher }
   } catch (e) {
     Responder.failed(res, { type: Errors.unauthorized })
   }
