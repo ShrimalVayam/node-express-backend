@@ -16,7 +16,7 @@ const User = user(sequelize)
 const Subject = subject(sequelize)
 const Enrollment = enrollment(sequelize)
 
-User.hasMany(Subject)
+User.hasMany(Subject, { foreignKey: 'teacherId' })
 Subject.belongsToMany(User, { through: Enrollment, foreignKey: 'studentId' })
 
 export { User, Subject, Enrollment }
