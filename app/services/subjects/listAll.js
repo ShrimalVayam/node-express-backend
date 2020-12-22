@@ -1,5 +1,4 @@
 import { Subject } from '../../models'
-import { Errors } from '../../utils/errors'
 
 const listAllSubjects = async () => {
   try {
