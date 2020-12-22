@@ -31,6 +31,12 @@ export default (connObj) => {
     }
   })
 
-  User.prototype.comparePassword = async (password) => password ? await bcrypt.compare(password, this.pass) : false
+  User.prototype.comparePassword = async function (password) {
+    if (!password) {
+      return false
+    }
+    const result = await bcrypt.compare(password, this.password)
+    return result
+  }
   return User
 }
