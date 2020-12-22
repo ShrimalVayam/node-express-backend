@@ -2,6 +2,7 @@ import * as Responder from '../server/expressResponder'
 import createSubjectService from '../services/subjects/create'
 import listAllSubjectsService from '../services/subjects/listAll'
 import updateSubjectService from '../services/subjects/update'
+import deleteSubjectService from '../services/subjects/delete'
 
 const createSubjects = async ({ body, user }, res) => {
   const result = await createSubjectService({ ...body, ...user })
@@ -18,4 +19,9 @@ const updateSubject = async ({ body, params, user: { userId } }, res) => {
   Responder.checker(res, result)
 }
 
-export { createSubjects, listAllSubjects, updateSubject }
+const deleteSubject = async ({ params, user: { userId } }, res) => {
+  const result = await deleteSubjectService({ ...params, userId })
+  Responder.checker(res, result)
+}
+
+export { createSubjects, listAllSubjects, updateSubject, deleteSubject }

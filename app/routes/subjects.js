@@ -20,4 +20,10 @@ subjectRouter.put('/:subjectId',
   validatorMiddleware(subjectsController.updateSubject)
 )
 
+subjectRouter.delete('/:subjectId',
+  isAuthenticatedTeacher,
+  subjectsSchema.deleteSubject,
+  validatorMiddleware(subjectsController.deleteSubject)
+)
+
 export default subjectRouter
