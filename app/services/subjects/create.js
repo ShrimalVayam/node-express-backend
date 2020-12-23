@@ -7,7 +7,7 @@ const createSubject = async ({ name, type, userId }) => {
     return subject
   } catch (e) {
     if (e.name === 'SequelizeUniqueConstraintError') {
-      return { type: Errors.conflict, message: Messages.resourceConflict('subject') }
+      return { error: { type: Errors.conflict, message: Messages.resourceConflict('subject') } }
     }
     return { error: true }
   }
