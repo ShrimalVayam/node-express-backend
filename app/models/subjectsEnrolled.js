@@ -5,4 +5,12 @@ export default (connObj) => connObj.define('subjectsEnrolled', {
     type: Sequelize.INTEGER,
     defaultValue: 0
   }
-})
+}, {
+  indexes: [
+    {
+      unique: true,
+      fields: ['studentId', 'subjectId']
+    }
+  ]
+}
+)

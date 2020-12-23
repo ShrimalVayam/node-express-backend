@@ -11,10 +11,12 @@ export default (connObj) => {
     },
     username: {
       type: Sequelize.STRING(50),
+      unique: true,
       allowNull: false
     },
     email: {
-      type: Sequelize.TEXT,
+      type: Sequelize.STRING,
+      unique: true,
       allowNull: false
     },
     password: {
@@ -24,10 +26,6 @@ export default (connObj) => {
         const passHash = bcrypt.hashSync(password, salt)
         this.setDataValue('password', passHash)
       }
-    },
-    isTeacher: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false
     }
   })
 
