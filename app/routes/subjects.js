@@ -2,7 +2,7 @@ import express from 'express'
 
 import * as subjectsController from '../controllers/subjects.controller'
 import { validatorMiddleware, subjectsSchema } from '../validation'
-import { isAuthenticated, isAuthenticatedTeacher } from '../lib/auth'
+import { isAuthenticated, isAuthenticatedTeacher, isAuthenticatedStudent } from '../lib/auth'
 
 const subjectRouter = express.Router()
 
@@ -24,6 +24,12 @@ subjectRouter.delete('/:subjectId',
   isAuthenticatedTeacher,
   subjectsSchema.deleteSubject,
   validatorMiddleware(subjectsController.deleteSubject)
+)
+
+subjectRouter.post('/enroll/:subjectId',
+  isAuthenticatedStudent,
+  subjectsSchema.enrollSubject,
+  validatorMiddleware(subjectsController.enrollSubject)
 )
 
 export default subjectRouter
