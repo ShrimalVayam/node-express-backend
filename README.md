@@ -20,7 +20,7 @@ npm install
 ### Step to setup env variables
 
 ```
-Create a .env.development file in the project directory. In this file copy over the contents as is from the .env.example file to have the necessary environment variables set
+Create a .env.development file in the project directory and write the necessary variables. The code should work even if it is not done as default variables have already been passed.
 ```
 
 ### Step to start the app
