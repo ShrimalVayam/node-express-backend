@@ -1,0 +1,52 @@
+{
+  "name": "toothsi-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JainVayam/toothsi-task.git"
+  },
+  "author": "Vayam Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JainVayam/toothsi-task/issues"
+  },
+  "homepage": "https://github.com/JainVayam/toothsi-task#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^7.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "convict": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-boom": "^3.0.0",
+    "express-validator": "^6.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5"
+  }
+}
