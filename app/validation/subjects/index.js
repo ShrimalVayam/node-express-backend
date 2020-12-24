@@ -19,3 +19,9 @@ export const deleteSubject = [
 
 export const enrollSubject = [
   paramExists('subjectId').isInt()]
+
+export const updateAttendance = [
+  paramExists('subjectId').isInt(),
+  paramExists('studentId').isInt(),
+  bodyExists('attendance').isInt()
+]

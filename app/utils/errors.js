@@ -12,5 +12,6 @@ export const Messages = {
   emailAlreadyRegistered: 'Email already registered! Please login',
   emailNotRegistered: 'Email is not registered',
   incorrectPassword: 'The password entered is incorrect',
-  resourceConflict: (resource) => `The ${resource} already exists`
+  resourceConflict: resource => `The ${resource} already exists`,
+  resourceNotFound: resource => `${resource} not found`
 }
