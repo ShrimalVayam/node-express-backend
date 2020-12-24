@@ -1,1 +1,38 @@
-# toothsi-task
+# Node Test Task
+
+## Introduction
+This simple backend server is for setting up all the APIs for the given requirements.
+
+### Steps to clone the repository
+
+```
+git clone git@github.com:JainVayam/backend-task.git
+cd backend-task
+
+```
+## Installing and Running the app locally
+
+### Steps to install packages
+In the project directory's terminal run below command to install all the required packages
+```
+npm install
+```
+### Step to setup env variables
+
+```
+Create a .env.development file in the project directory. In this file copy over the contents as is from the .env.example file to have the necessary environment variables set
+```
+
+### Step to start the app
+
+In the project directory terminal run the below command
+```
+npm run dev
+```
+
+## Assumptions and Considerations
+
+* As discussed, I have used Sequelize as the ORM and not TypeForm.
+* The work for adding a session and deploying to Heroku etc is still remaining. I'll try to add those soon as well.
+
+### Please find the Postman Collection [here](https://www.getpostman.com/collections/23060909186cf4877304).
