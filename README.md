@@ -1,11 +1,11 @@
 # Node Express Task
 
+
 ## Introduction
 This simple backend server is for setting up all the APIs for the given requirements.
 
 ### Steps to clone the repository
 
-```
 git clone git@github.com:JainVayam/node-express-backend.git
 cd node-express-backend
 
@@ -21,6 +21,7 @@ npm install
 
 ```
 Create a .env.development file in the project directory and write the necessary variables. The code should work even if it is not done as default variables have already been passed.
+
 ```
 
 ### Step to start the app
