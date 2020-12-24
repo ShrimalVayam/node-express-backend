@@ -1,4 +1,4 @@
-# Node Test Task
+# Node Express Task
 
 ## Introduction
 This simple backend server is for setting up all the APIs for the given requirements.
@@ -6,8 +6,8 @@ This simple backend server is for setting up all the APIs for the given requirem
 ### Steps to clone the repository
 
 ```
-git clone git@github.com:JainVayam/backend-task.git
-cd backend-task
+git clone git@github.com:JainVayam/node-express-backend.git
+cd node-express-backend
 
 ```
 ## Installing and Running the app locally
