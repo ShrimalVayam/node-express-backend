@@ -32,4 +32,10 @@ subjectRouter.post('/enroll/:subjectId',
   validatorMiddleware(subjectsController.enrollSubject)
 )
 
+subjectRouter.put('/:subjectId/attendance/:studentId',
+  isAuthenticatedTeacher,
+  subjectsSchema.updateAttendance,
+  validatorMiddleware(subjectsController.updateAttendance)
+)
+
 export default subjectRouter

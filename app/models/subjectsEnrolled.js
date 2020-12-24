@@ -2,7 +2,7 @@ import Sequelize from 'sequelize'
 
 export default (connObj) => connObj.define('subjectsEnrolled', {
   attendance: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.INTEGER.UNSIGNED,
     defaultValue: 0
   }
 }, {

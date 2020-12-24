@@ -25,7 +25,7 @@ User.hasMany(Student)
 
 Teacher.hasMany(Subject, { foreignKey: 'teacherId' })
 
-Subject.belongsToMany(Student, { through: Enrollment, foreignKey: 'subjectId', onDelete: 'CASCADE' })
+Subject.belongsToMany(Student, { through: Enrollment, targetKey: 'userId', foreignKey: 'subjectId', onDelete: 'CASCADE' })
 Student.belongsToMany(Subject, { through: Enrollment, foreignKey: 'studentId' })
 
 export { User, Subject, Enrollment, Teacher, Student }
