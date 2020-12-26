@@ -5,7 +5,7 @@
 This simple backend server is for setting up all the APIs for the given requirements.
 
 ### Steps to clone the repository
-
+```
 git clone git@github.com:JainVayam/node-express-backend.git
 cd node-express-backend
 
